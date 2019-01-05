@@ -548,3 +548,183 @@ Processing by EmployeesController#index as HTML
 Completed 200 OK in 31ms (Views: 27.4ms | ActiveRecord: 0.5ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1526777954830909620);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPassordToEmployee (20190105151428)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (26.5ms)[0m  [1m[35mALTER TABLE "employees" ADD "password_hash" character varying[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "employees" ADD "password_salt" character varying[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190105151428"]]
+  [1m[35m (31.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1526777954830909620)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/employees/new" for 127.0.0.1 at 2019-01-05 20:49:43 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (3.2ms)
+  Rendered employees/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 244ms (Views: 204.7ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2019-01-05 20:50:01 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Msjv6gpO4r3QtOW3lQ8VuLtLGJqw6KIWQNM2w1LpOEpxZbKEdOiRi97Hh0T26VnpzgbAg2fPVBEpIaXrAGKtjA==", "employee"=>{"name"=>"mike", "email"=>"mike@kreatio.com", "password"=>"[FILTERED]"}, "commit"=>"create"}
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<EmployeeMember:0x007f91000ae860>
+Did you mean?  password_salt=):
+  
+app/controllers/employees_controller.rb:15:in `create'
+  Rendering /home/saawan/.rvm/gems/ruby-2.4.0@event/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/saawan/.rvm/gems/ruby-2.4.0@event/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.4.0@event/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /home/saawan/.rvm/gems/ruby-2.4.0@event/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.4.0@event/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/saawan/.rvm/gems/ruby-2.4.0@event/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.4.0@event/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/saawan/.rvm/gems/ruby-2.4.0@event/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.1ms)
+Started PUT "/__web_console/repl_sessions/e279668bec836022d7167cf0f29fd39f" for 127.0.0.1 at 2019-01-05 20:50:23 +0530
+Started PUT "/__web_console/repl_sessions/e279668bec836022d7167cf0f29fd39f" for 127.0.0.1 at 2019-01-05 20:50:26 +0530
+Started PUT "/__web_console/repl_sessions/e279668bec836022d7167cf0f29fd39f" for 127.0.0.1 at 2019-01-05 20:50:33 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1526777954830909620);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPassordDigestToEmployee (20190105154114)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "employees" ADD "password_digest" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190105154114"]]
+  [1m[35m (122.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1526777954830909620)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/employees/new" for 127.0.0.1 at 2019-01-05 21:11:41 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (4.9ms)
+  Rendered employees/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 262ms (Views: 218.8ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2019-01-05 21:11:57 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VfHoWELG+a9Az5Ka7b8JD6v9I8mCcvHugSAFpPC7Z48WXLU2PGCKmU688GmOWUVe3rD70FVVB+no0paMojDySQ==", "employee"=>{"name"=>"mike", "email"=>"mike@kreatio.com", "password"=>"[FILTERED]"}, "commit"=>"create"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "mike"], ["email", "mike@kreatio.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-05 15:41:57.428147"], ["updated_at", "2019-01-05 15:41:57.428147"], ["password_digest", "$2a$10$YF6vkqSles3YIGevuFwKWOOb5K/UIBdX4Eww/Zwjb16O0rVjVpCUi"]]
+  [1m[35m (54.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 145ms (ActiveRecord: 55.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-05 21:11:57 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  Rendered employees/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1526777954830909620);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemovePassordToEmployee (20190105155444)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.5ms)[0m  [1m[35mALTER TABLE "employees" DROP "password_hash"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "employees" DROP "password_salt"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190105155444"]]
+  [1m[35m (36.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1526777954830909620)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1526777954830909620);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemovePassordhashToEmployee (20190105155603)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "employees" DROP "password"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190105155603"]]
+  [1m[35m (108.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1526777954830909620)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/employees/new" for 127.0.0.1 at 2019-01-05 21:29:07 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (9.5ms)
+  Rendered employees/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 715ms (Views: 652.3ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2019-01-05 21:29:36 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v0oC3dJLnMn2f/2bl7+U7mpVrpjH6KMM2D5e/JKQdL/851+zrO3v//gMn2j0Wdi/Hxh2gRDPVQuxzM3UwBvheQ==", "employee"=>{"name"=>"Nitesh", "email"=>"nitesh@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"create"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Nitesh"], ["email", "nitesh@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-05 15:59:36.748155"], ["updated_at", "2019-01-05 15:59:36.748155"], ["password_digest", "$2a$10$4o0GuEwPyzMq1M1YUfcOFOJoUWrvDviYW2uqCU.8AFSJfFcHayVw6"]]
+  [1m[35m (72.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 164ms (ActiveRecord: 72.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-05 21:29:36 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (2.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  Rendered employees/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 37ms (Views: 32.1ms | ActiveRecord: 2.1ms)
+
+
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."name" = $1 LIMIT $2[0m  [["name", "Nitesh"], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."name" = $1 LIMIT $2[0m  [["name", "Nitesh"], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."name" = $1 LIMIT $2[0m  [["name", "Nitesh"], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."name" = $1 LIMIT $2[0m  [["name", "Nitesh"], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."name" = $1 LIMIT $2[0m  [["name", "Nitesh"], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."name" = $1 LIMIT $2[0m  [["name", "Nitesh"], ["LIMIT", 1]]
+Started GET "/employees/new" for 127.0.0.1 at 2019-01-05 21:40:10 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (3.7ms)
+  Rendered employees/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 357ms (Views: 297.9ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2019-01-05 21:40:58 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VhcAZZOX+XefveQq1EM3pKXXsPZ/4vtioixCUUWYrqAVul0L7TGKQZHOhtm3pXv10Jpo76jFDWXL3tF5FxM7Zg==", "employee"=>{"name"=>"megha", "email"=>"megha@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"create"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "megha"], ["email", "megha@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-05 16:10:58.596804"], ["updated_at", "2019-01-05 16:10:58.596804"], ["password_digest", "$2a$10$Ch6nJPFGvrN1yRjtl1sPQ.1eNEVOY8lIdEaPtW4/1o2MBYu9JhUWW"]]
+  [1m[35m (43.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 139ms (ActiveRecord: 45.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-05 21:40:58 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  Rendered employees/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 60ms (Views: 52.8ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."name" = $1 LIMIT $2[0m  [["name", "megha"], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."name" = $1 LIMIT $2[0m  [["name", "megha"], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "megha123"], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "megha@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "megha@gmail.com"], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "megha@gmail.com"], ["LIMIT", 1]]

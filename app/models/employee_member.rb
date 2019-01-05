@@ -1,0 +1,3 @@
+class EmployeeMember < Employee
+   
+end

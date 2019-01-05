@@ -1,0 +1,3 @@
+class EmployeeManager < Employee
+	
+end

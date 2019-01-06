@@ -1,9 +1,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /></meta>
 <h1>Reset Password email.</h1>
-<h2><%= @employee.name %></h2>
+<h2><%= @employee.email %></h2>
 <pre>
-	Hi, <%= @employee.email %>
+	Hi, <%= @employee.name %>
 
 	Your Member Account has been successfully created.
-	Please follow the link to reser your password: <%= @url %>.
+	Your password to log in: <%= @employee.password %>.
+
+    <p class="bg-danger">Note: Reset password link is in progress.</p>
 </pre>

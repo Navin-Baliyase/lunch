@@ -1,8 +1,7 @@
 class NotificationMailer < ApplicationMailer
   default from: 'info@lunch.com'
-  def notification_mailer(employee,url)
+  def notification_mailer(employee)
     @employee = employee
-    @url  = url
     mail(to: @employee.email,:subject => "New Notification")
   end
 

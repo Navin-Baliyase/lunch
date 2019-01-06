@@ -1,4 +1,5 @@
 class EmployeesController < ApplicationController
+	protect_from_forgery
 	before_action :verify_login, only: [:show, :update, :destroy, :index, :update_password]
 
 	def home
@@ -39,8 +40,7 @@ class EmployeesController < ApplicationController
 	def create
 		@employee = EmployeeMember.new(employee_params)
 		if @employee.save
-			@url = request.host + @employee.id
-			NotificationMailer.notification_mailer(@employee,@url).deliver
+			NotificationMailer.notification_mailer(@employee).deliver
 			redirect_to employees_path, :notice => 'Reset password mail successfully created.'
 		else
 			flash.now.alert = "Email Already Taken"

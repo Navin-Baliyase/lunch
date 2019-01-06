@@ -27,7 +27,8 @@
     <%end%>
   </tbody>
   <%if current_user && current_user.type == "EmployeeManager"%>
-  <p class="button"><%= submit_tag "Finalize", {:class=>"btn btn-info pull-right"} %></p>
+  <p class="button"><%= submit_tag "Finalize", {:class=>"btn btn-success pull-right"} %></p>
+  <p class="button"><%= link_to 'Add employee', new_employee_path, {:class=>"btn btn-info pull-left"} %></p>
   <%end%>
   <%end%>
   <br>

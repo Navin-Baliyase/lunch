@@ -250,3 +250,21 @@ Migrating to RemovePassordhashToEmployee (20190105155603)
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 18:18:47.526449"], ["updated_at", "2019-01-06 18:18:47.526449"], ["password_digest", "$2a$04$0nbqKPsdPbhiaK0u4uGESObSgay3hTZOpL6VSsLH1ikv5ijperKku"]]
+  [1m[35m (118.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (20.5ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 18:18:48.425219"], ["updated_at", "2019-01-06 18:18:48.425219"], ["password_digest", "$2a$04$eeDLTARuXgqDexgdWhm8ZOY.Xm0fSsnxAObkCxnCSliY32eSh2X/a"]]
+  [1m[35m (35.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m

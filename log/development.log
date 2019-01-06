@@ -13843,3 +13843,1909 @@ Processing by EmployeesController#index as HTML
 Completed 200 OK in 106ms (Views: 88.1ms | ActiveRecord: 11.4ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (390.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (428.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_development"[0m
+  [1m[35m (333.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_test"[0m
+  [1m[35m (1531.4ms)[0m  [1m[35mCREATE DATABASE "planner_development" ENCODING = 'unicode'[0m
+  [1m[35m (809.6ms)[0m  [1m[35mCREATE DATABASE "planner_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (158.2ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (131.0ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (79.3ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (34.2ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (155.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (55.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (23.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (146.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 17:30:33.038818"], ["updated_at", "2019-01-06 17:30:33.038818"]]
+  [1m[35m (28.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (127.4ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (131.0ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (78.8ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (34.3ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (155.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (33.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (24.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (130.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 17:30:33.865702"], ["updated_at", "2019-01-06 17:30:33.865702"]]
+  [1m[35m (26.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-01-06 17:30:33.902876"], ["key", "environment"]]
+  [1m[35m (24.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Navin"], ["email", "navinkumar2508@gmail.com"], ["type", "EmployeeManager"], ["created_at", "2019-01-06 17:30:34.075993"], ["updated_at", "2019-01-06 17:30:34.075993"], ["password_digest", "$2a$10$VKPYyUv/GKNyQhYfvjbNOe0FctAgJEYkZcEuJt/mX3ff1U/WBr4GC"]]
+  [1m[35m (22.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1526777954830909620);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1526777954830909620)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/logout" for 127.0.0.1 at 2019-01-06 23:02:04 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#destroy_login as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:02:04 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 179ms (Views: 177.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:02:09 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (5.6ms)
+Filter chain halted as :verify_login rendered or redirected
+Completed 200 OK in 102ms (Views: 100.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login?utf8=%E2%9C%93&employee%5Bemail%5D=navinkumar2508%40gmail.com&employee%5Bpassword%5D=[FILTERED]&commit=Log+in" for 127.0.0.1 at 2019-01-06 23:02:27 +0530
+Processing by EmployeesController#verify_login as HTML
+  Parameters: {"utf8"=>"✓", "employee"=>{"email"=>"navinkumar2508@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mEmployee Load (2.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 174ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:02:27 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  Rendered employees/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 21.4ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (428.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_development"[0m
+  [1m[35m (335.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_test"[0m
+  [1m[35m (744.8ms)[0m  [1m[35mCREATE DATABASE "planner_development" ENCODING = 'unicode'[0m
+  [1m[35m (792.6ms)[0m  [1m[35mCREATE DATABASE "planner_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (122.6ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (582.6ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (324.4ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (78.6ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (253.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (21.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (24.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (119.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 17:39:32.256270"], ["updated_at", "2019-01-06 17:39:32.256270"]]
+  [1m[35m (27.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (129.5ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (130.9ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (68.3ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (23.0ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (169.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (31.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (24.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (142.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 17:39:33.082452"], ["updated_at", "2019-01-06 17:39:33.082452"]]
+  [1m[35m (26.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-01-06 17:39:33.118857"], ["key", "environment"]]
+  [1m[35m (25.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Navin"], ["email", "navinkumar2508@gmail.com"], ["type", "EmployeeManager"], ["created_at", "2019-01-06 17:39:33.280330"], ["updated_at", "2019-01-06 17:39:33.280330"], ["password_digest", "$2a$10$zG5yiyFL5MvqWOXOPdeLyO3Oof/EEzkQXXmIoOGCdjdgQf8HCN47a"]]
+  [1m[35m (23.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "ramon.roob@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Lenore Kreiger"], ["email", "ramon.roob@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:39:34.126754"], ["updated_at", "2019-01-06 17:39:34.126754"], ["password_digest", "$2a$10$U9FHonSr16U8vGP7fMRwzOxeLqvIZigQeQEJr3P9ikt7lJdrwY.Qa"]]
+  [1m[35m (63.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "hoa@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Justa Stracke"], ["email", "hoa@hotmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:39:34.292597"], ["updated_at", "2019-01-06 17:39:34.292597"], ["password_digest", "$2a$10$bGjZxa4UVtMaHmK1jE78P.WExQnHcH.4lSQ4TYM8bToKbfwYU7fkm"]]
+  [1m[35m (38.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "valentine@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kathleen Jenkins"], ["email", "valentine@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:39:34.422515"], ["updated_at", "2019-01-06 17:39:34.422515"], ["password_digest", "$2a$10$cvsbrhjBkndMyvMvEwX.1OoqVTPtsY0Wg.kBxscBpy0TaFEpZAhEa"]]
+  [1m[35m (22.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "conception_schinner@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Eun Kilback"], ["email", "conception_schinner@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:39:34.529510"], ["updated_at", "2019-01-06 17:39:34.529510"], ["password_digest", "$2a$10$LpTFJyHLVSEpMwIjVgr2PO5knqun3iipYGtelxsHz6XtTltXul64u"]]
+  [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "mario@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Wilbur Bernier"], ["email", "mario@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:39:34.631781"], ["updated_at", "2019-01-06 17:39:34.631781"], ["password_digest", "$2a$10$wudFchDpQw59suylVaGhlOStQsX.VOCGtZw8xqbI.Tr/pgHy8N/VW"]]
+  [1m[35m (17.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "carlton_medhurst@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Roberto Crona V"], ["email", "carlton_medhurst@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:40:50.251643"], ["updated_at", "2019-01-06 17:40:50.251643"], ["password_digest", "$2a$10$euJ0YfVttjlJ.LeUwW21Be32A9PKXqRpu4q9rJOTK1Xu2sZNaJzL2"]]
+  [1m[35m (108.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "lanny.hamill@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Nakita Kovacek"], ["email", "lanny.hamill@hotmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:40:50.447582"], ["updated_at", "2019-01-06 17:40:50.447582"], ["password_digest", "$2a$10$A5mdYskdGHoW0aoYZ3FxWu8WDhvN0u2kD.XEsSeO7Dow3Ll333rOy"]]
+  [1m[35m (26.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "burton.bergnaum@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Freddie Purdy"], ["email", "burton.bergnaum@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:40:50.558236"], ["updated_at", "2019-01-06 17:40:50.558236"], ["password_digest", "$2a$10$HrUuJCdv9y8c0G8Oz.FVMuG/cJ4Y/KyHWK1s00nPXbLEu3iFR8tI."]]
+  [1m[35m (29.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "vita@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Katheryn Ernser IV"], ["email", "vita@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:40:50.671587"], ["updated_at", "2019-01-06 17:40:50.671587"], ["password_digest", "$2a$10$e2cwdjpVBEZ.e8vXNoRkJ.JxTQPLHu4QDkfiq/mhGS0tI2AmxThmq"]]
+  [1m[35m (29.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "willian_jacobi@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Nelida Weber"], ["email", "willian_jacobi@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:40:50.785151"], ["updated_at", "2019-01-06 17:40:50.785151"], ["password_digest", "$2a$10$Bq57xArtfmBybHS6lhErEOUFpGSh3hsw/wz.DQE1eDnfTCXrYxEKK"]]
+  [1m[35m (29.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (1438.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_development"[0m
+  [1m[35m (340.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_test"[0m
+  [1m[35m (813.1ms)[0m  [1m[35mCREATE DATABASE "planner_development" ENCODING = 'unicode'[0m
+  [1m[35m (1135.9ms)[0m  [1m[35mCREATE DATABASE "planner_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (213.7ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (130.9ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (78.9ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (34.3ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (155.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (33.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (24.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (233.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 17:41:01.635382"], ["updated_at", "2019-01-06 17:41:01.635382"]]
+  [1m[35m (26.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (137.5ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (131.3ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (79.5ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (34.3ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (153.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (21.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (23.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (130.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 17:41:02.436241"], ["updated_at", "2019-01-06 17:41:02.436241"]]
+  [1m[35m (26.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-01-06 17:41:02.472897"], ["key", "environment"]]
+  [1m[35m (25.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Navin"], ["email", "navinkumar2508@gmail.com"], ["type", "EmployeeManager"], ["created_at", "2019-01-06 17:41:02.634340"], ["updated_at", "2019-01-06 17:41:02.634340"], ["password_digest", "$2a$10$u1V.WuyKjfLGcldNPoCobeu3yOdXZyCeoGpqvh3iVIFkf.xDBwsES"]]
+  [1m[35m (23.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "frank_feeney@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Laquita Nolan"], ["email", "frank_feeney@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:41:03.495070"], ["updated_at", "2019-01-06 17:41:03.495070"], ["password_digest", "$2a$10$JmjI1cismsFCjS4mzd2J.OWFfJF5QrhSRcqLwT9OSPALroFuDwslO"]]
+  [1m[35m (87.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "miquel@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mrs. Erin Grant"], ["email", "miquel@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:41:03.690252"], ["updated_at", "2019-01-06 17:41:03.690252"], ["password_digest", "$2a$10$ypRq3kIsZWM.DtiKpfRa9usY58pDhABAHOUmZziyo30thmYUQYaHe"]]
+  [1m[35m (28.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "candyce@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jose Baumbach"], ["email", "candyce@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:41:03.803179"], ["updated_at", "2019-01-06 17:41:03.803179"], ["password_digest", "$2a$10$gK86yTZggl6Si2p2AIz6QOysVrF7/FJqtmH8ELniGOz9UOi/0.lvi"]]
+  [1m[35m (28.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "celesta_brown@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mr. Brady O'Keefe"], ["email", "celesta_brown@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:41:03.916937"], ["updated_at", "2019-01-06 17:41:03.916937"], ["password_digest", "$2a$10$99N/iifz7a/ICbLgIT1On.gcoORLDkRExo9AMRwhUuYpQ8kjE0wdu"]]
+  [1m[35m (28.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "ivette@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Lewis Sanford Jr."], ["email", "ivette@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:41:04.034090"], ["updated_at", "2019-01-06 17:41:04.034090"], ["password_digest", "$2a$10$1v.foDvKbVU1sFBnnGpecuTm9pkmZXWgKAPl1JlPLTVdEFj8LpU/i"]]
+  [1m[35m (25.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "josue_borer@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Larita Heidenreich"], ["email", "josue_borer@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:41:08.883491"], ["updated_at", "2019-01-06 17:41:08.883491"], ["password_digest", "$2a$10$/lUF6FTass9y4/yEEV8jluhEUV2XH5NeHk2OSuQUd6cLysq/KWU7u"]]
+  [1m[35m (126.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "magnolia_legros@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Dr. Arlette Braun"], ["email", "magnolia_legros@hotmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:41:09.112170"], ["updated_at", "2019-01-06 17:41:09.112170"], ["password_digest", "$2a$10$ECq2x8iMUt.4dNP9RQH01ej8dN.QH5D4J.g9B8aPQ8Zz9oArYgjsK"]]
+  [1m[35m (22.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "rosalyn@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kam Bernier"], ["email", "rosalyn@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:41:09.219782"], ["updated_at", "2019-01-06 17:41:09.219782"], ["password_digest", "$2a$10$1cG7yErARRIMu5YaPhtYYO.E68H9EEZp9bp.lHj381Tqidyua62r2"]]
+  [1m[35m (29.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "nery_collins@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Eloisa Borer"], ["email", "nery_collins@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:41:09.333325"], ["updated_at", "2019-01-06 17:41:09.333325"], ["password_digest", "$2a$10$BxbCcvDMilPsTR4nRmpNleVBY6zdrVfcnYEz9CO0yQsmxCGdIXdya"]]
+  [1m[35m (29.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "clay.bradtke@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Troy Champlin"], ["email", "clay.bradtke@hotmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:41:09.446900"], ["updated_at", "2019-01-06 17:41:09.446900"], ["password_digest", "$2a$10$VEUng/R80eObYmFbQ4RZjewtjiyOoCzDmP70ddHFpP9llywMVgUfe"]]
+  [1m[35m (29.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/logout" for 127.0.0.1 at 2019-01-06 23:11:26 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#destroy_login as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:11:26 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 169ms (Views: 167.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-06 23:11:30 +0530
+Processing by EmployeesController#verify_login as HTML
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login?utf8=%E2%9C%93&employee%5Bemail%5D=navinkumar2508%40gmail.com&employee%5Bpassword%5D=[FILTERED]&commit=Log+in" for 127.0.0.1 at 2019-01-06 23:11:40 +0530
+Processing by EmployeesController#verify_login as HTML
+  Parameters: {"utf8"=>"✓", "employee"=>{"email"=>"navinkumar2508@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 173ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:11:40 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 53ms (Views: 45.6ms | ActiveRecord: 4.6ms)
+
+
+  [1m[36mEmployeeManager Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeManager') ORDER BY "employees"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:16:13 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (58.9ms)
+Completed 200 OK in 127ms (Views: 109.0ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:17:40 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (3.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (1.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (3.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (65.3ms)
+Completed 200 OK in 115ms (Views: 92.7ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:18:52 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 104ms (Views: 85.6ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:18:55 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 51ms (Views: 40.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:19:00 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (53.1ms)
+Completed 200 OK in 82ms (Views: 68.3ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:19:02 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (2.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 91ms (Views: 75.2ms | ActiveRecord: 9.4ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (5141.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (334.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_development"[0m
+  [1m[35m (334.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_test"[0m
+  [1m[35m (812.4ms)[0m  [1m[35mCREATE DATABASE "planner_development" ENCODING = 'unicode'[0m
+  [1m[35m (813.0ms)[0m  [1m[35mCREATE DATABASE "planner_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (125.1ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (131.5ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (78.6ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (34.4ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (154.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (33.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (24.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (185.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 17:58:18.428192"], ["updated_at", "2019-01-06 17:58:18.428192"]]
+  [1m[35m (39.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (140.2ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (131.1ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (79.8ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (34.0ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (156.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (149.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (41.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (130.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 17:58:19.387689"], ["updated_at", "2019-01-06 17:58:19.387689"]]
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-01-06 17:58:19.425374"], ["key", "environment"]]
+  [1m[35m (24.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Navin"], ["email", "navinkumar2508@gmail.com"], ["type", "EmployeeManager"], ["created_at", "2019-01-06 17:58:19.616201"], ["updated_at", "2019-01-06 17:58:19.616201"], ["password_digest", "$2a$10$wRa32rkdwt0I2bK/sq7dL./CvZqCo7.dA3ptj/44PAFSKaVh7d0/W"]]
+  [1m[35m (26.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "salome_hickle@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Wyatt Kihn"], ["email", "salome_hickle@hotmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:58:20.462981"], ["updated_at", "2019-01-06 17:58:20.462981"], ["password_digest", "$2a$10$buUQbQTN9YTcE5OH/l3deOtEwZzDNn4TwYjfw4aPwXe8K3TTq.LbC"]]
+  [1m[35m (38.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Ashton Marks"], ["employee_id", 0], ["created_at", "2019-01-06 17:58:20.512395"], ["updated_at", "2019-01-06 17:58:20.512395"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (1541.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_development"[0m
+  [1m[35m (346.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_test"[0m
+  [1m[35m (813.4ms)[0m  [1m[35mCREATE DATABASE "planner_development" ENCODING = 'unicode'[0m
+  [1m[35m (840.3ms)[0m  [1m[35mCREATE DATABASE "planner_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (128.9ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (131.2ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (80.2ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (33.9ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (156.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (21.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (24.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (128.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 17:59:18.340973"], ["updated_at", "2019-01-06 17:59:18.340973"]]
+  [1m[35m (28.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (133.0ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (130.7ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (79.5ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (34.5ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (156.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (139.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (40.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (260.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 17:59:19.433571"], ["updated_at", "2019-01-06 17:59:19.433571"]]
+  [1m[35m (24.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-01-06 17:59:19.468147"], ["key", "environment"]]
+  [1m[35m (25.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Navin"], ["email", "navinkumar2508@gmail.com"], ["type", "EmployeeManager"], ["created_at", "2019-01-06 17:59:19.636695"], ["updated_at", "2019-01-06 17:59:19.636695"], ["password_digest", "$2a$10$If2gQjiixFgPO8myIsYpku5ND9BKMsKTlVF.EjdLO7k1/ItZJv/Ia"]]
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "kevin_green@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ana DuBuque I"], ["email", "kevin_green@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:59:20.491247"], ["updated_at", "2019-01-06 17:59:20.491247"], ["password_digest", "$2a$10$.ebfWe4s9rIdUafw8YFYhu2Vvun3vRq5kXGkq1GJ1XwOfjGSRfBYS"]]
+  [1m[35m (119.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Alona Weimann"], ["employee_id", 1], ["created_at", "2019-01-06 17:59:20.633232"], ["updated_at", "2019-01-06 17:59:20.633232"]]
+  [1m[35m (22.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "kirby.towne@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Karlyn Hilll"], ["email", "kirby.towne@hotmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:59:20.742408"], ["updated_at", "2019-01-06 17:59:20.742408"], ["password_digest", "$2a$10$dEqUP4md1xzdWGpGlBM51e9EWDB5pFrNxltihwAq6EDMsFMDIPxV."]]
+  [1m[35m (29.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Ivan Schoen"], ["employee_id", 2], ["created_at", "2019-01-06 17:59:20.773800"], ["updated_at", "2019-01-06 17:59:20.773800"]]
+  [1m[35m (22.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "emilio@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Iola Jenkins Sr."], ["email", "emilio@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:59:20.898440"], ["updated_at", "2019-01-06 17:59:20.898440"], ["password_digest", "$2a$10$LyS/3vlhFAu594nRWG5.Q.cld1lf3rC../80eBJfutY00M45ZrEiu"]]
+  [1m[35m (22.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Dr. Silas Osinski"], ["employee_id", 3], ["created_at", "2019-01-06 17:59:20.923042"], ["updated_at", "2019-01-06 17:59:20.923042"]]
+  [1m[35m (22.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "marisol@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Velva Lemke"], ["email", "marisol@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:59:21.036373"], ["updated_at", "2019-01-06 17:59:21.036373"], ["password_digest", "$2a$10$an045B793qzC7UvZTzHj9e27MFxxTEUp4XsrAVAP2/KpqG4zTRdQG"]]
+  [1m[35m (22.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Samara Tromp"], ["employee_id", 4], ["created_at", "2019-01-06 17:59:21.061145"], ["updated_at", "2019-01-06 17:59:21.061145"]]
+  [1m[35m (22.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "elias@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ken Rice"], ["email", "elias@hotmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 17:59:21.175029"], ["updated_at", "2019-01-06 17:59:21.175029"], ["password_digest", "$2a$10$6H2tRa0BBN2jY96N4XoeHuO4J9kNuxpBFkyqGK8/bqO9CPdqYjVx."]]
+  [1m[35m (22.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Yen Grimes"], ["employee_id", 5], ["created_at", "2019-01-06 17:59:21.199369"], ["updated_at", "2019-01-06 17:59:21.199369"]]
+  [1m[35m (22.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+Started GET "/logout" for 127.0.0.1 at 2019-01-06 23:29:48 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#destroy_login as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:29:49 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 173ms (Views: 172.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-06 23:29:51 +0530
+Processing by EmployeesController#verify_login as HTML
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login?utf8=%E2%9C%93&employee%5Bemail%5D=navinkumar2508%40gmail.com&employee%5Bpassword%5D=[FILTERED]&commit=Log+in" for 127.0.0.1 at 2019-01-06 23:30:00 +0530
+Processing by EmployeesController#verify_login as HTML
+  Parameters: {"utf8"=>"✓", "employee"=>{"email"=>"navinkumar2508@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mEmployee Load (1.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 184ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:30:00 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 56ms (Views: 47.9ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/finalize" for 127.0.0.1 at 2019-01-06 23:30:36 +0530
+Processing by EmployeesController#finalize as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x40FSbWdnBH7wvO7yZu90UrFemWEdnsirwJpCGYSzy7+vMgqMgDkSsc8aDYCVjelA3MhqKfyYeuALvgJz5dMMQ==", "commit"=>"Finalize", "employee_id"=>"4"}
+  [1m[36mEmployeeMember Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember') AND "employees"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  Rendering notification_mailer/finalize_mailer.html.erb within layouts/mailer
+  Rendered notification_mailer/finalize_mailer.html.erb within layouts/mailer (0.4ms)
+NotificationMailer#finalize_mailer: processed outbound mail in 228.8ms
+Sent mail to emilio@yahoo.com (124.5ms)
+Date: Sun, 06 Jan 2019 23:30:36 +0530
+From: info@lunch.com
+To: emilio@yahoo.com
+Message-ID: <5c324244d79c5_30b2ac614e3c5b04677a@saawan.mail>
+Subject: Ready for Party!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /></meta>
+<h1>Get Ready to party Hard</h1>
+<h2>Iola Jenkins Sr.</h2>
+<pre>
+	Hi, emilio@yahoo.com
+
+	Reach us @ Samara Tromp.
+</pre>
+  </body>
+</html>
+
+  Rendering employees/finalize.html.erb within layouts/application
+  Rendered employees/finalize.html.erb within layouts/application (3.5ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 734ms (Views: 61.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:34:02 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.2ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:34:15 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 84ms (Views: 72.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-01-06 23:34:32 +0530
+Processing by EmployeesController#destroy_login as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:34:32 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:34:34 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (1.7ms)
+Filter chain halted as :verify_login rendered or redirected
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login?utf8=%E2%9C%93&employee%5Bemail%5D=emilio%40yahoo.com&employee%5Bpassword%5D=[FILTERED]&commit=Log+in" for 127.0.0.1 at 2019-01-06 23:34:43 +0530
+Processing by EmployeesController#verify_login as HTML
+  Parameters: {"utf8"=>"✓", "employee"=>{"email"=>"emilio@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "emilio@yahoo.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 102ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:34:43 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 33ms (Views: 27.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 23:34:46 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/place?utf8=%E2%9C%93&place%5Bemployee_id%5D=4&place%5Bproposed_place%5D=Kabab+Magic&commit=Submit" for 127.0.0.1 at 2019-01-06 23:34:52 +0530
+Processing by EmployeesController#user_place as HTML
+  Parameters: {"utf8"=>"✓", "place"=>{"employee_id"=>"4", "proposed_place"=>"Kabab Magic"}, "commit"=>"Submit"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Load (2.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Kabab Magic"], ["employee_id", 4], ["created_at", "2019-01-06 18:04:52.612418"], ["updated_at", "2019-01-06 18:04:52.612418"]]
+  [1m[35m (178.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 208ms (ActiveRecord: 183.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:34:52 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (6.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (51.1ms)
+Completed 200 OK in 100ms (Views: 80.1ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:35:20 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 47ms (Views: 40.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 23:35:23 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 51ms (Views: 47.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:35:26 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.6ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 76.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-01-06 23:35:30 +0530
+Processing by EmployeesController#destroy_login as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:35:30 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-06 23:35:43 +0530
+Processing by EmployeesController#verify_login as HTML
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (442.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_development"[0m
+  [1m[35m (340.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_test"[0m
+  [1m[35m (795.4ms)[0m  [1m[35mCREATE DATABASE "planner_development" ENCODING = 'unicode'[0m
+  [1m[35m (821.9ms)[0m  [1m[35mCREATE DATABASE "planner_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (133.4ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (266.8ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (80.1ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (34.4ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (131.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (22.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (24.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (130.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 18:06:30.264941"], ["updated_at", "2019-01-06 18:06:30.264941"]]
+  [1m[35m (30.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (138.5ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (131.4ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (79.3ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (34.6ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (155.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (22.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (23.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (130.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 18:06:31.093317"], ["updated_at", "2019-01-06 18:06:31.093317"]]
+  [1m[35m (27.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-01-06 18:06:31.130371"], ["key", "environment"]]
+  [1m[35m (98.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Navin"], ["email", "navinkumar2508@gmail.com"], ["type", "EmployeeManager"], ["created_at", "2019-01-06 18:06:31.365280"], ["updated_at", "2019-01-06 18:06:31.365280"], ["password_digest", "$2a$10$LmOItbSrLKxefep/svn4vuqPKuoClDnfoJqmztMuHrmx7L8mstnV2"]]
+  [1m[35m (50.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "song_mcclure@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Forrest Schamberger III"], ["email", "song_mcclure@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 18:06:32.237345"], ["updated_at", "2019-01-06 18:06:32.237345"], ["password_digest", "$2a$10$x7DKmBEpf.Ax/G7hHZOSh.WbQ/SDzCH2Bye/frPcoZj9E7hCwtix."]]
+  [1m[35m (189.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Drusilla Glover"], ["employee_id", 1], ["created_at", "2019-01-06 18:06:32.450900"], ["updated_at", "2019-01-06 18:06:32.450900"]]
+  [1m[35m (44.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "edwardo_corwin@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Emogene Zboncak"], ["email", "edwardo_corwin@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 18:06:32.608225"], ["updated_at", "2019-01-06 18:06:32.608225"], ["password_digest", "$2a$10$QLSd90HYFhKgxXQ8Kpkcc.td8VF3j1HrxOUJjbFXeV0r2bJkynRqe"]]
+  [1m[35m (25.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Werner Zemlak"], ["employee_id", 2], ["created_at", "2019-01-06 18:06:32.636538"], ["updated_at", "2019-01-06 18:06:32.636538"]]
+  [1m[35m (22.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "junita_walter@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Dr. Elvia Kshlerin"], ["email", "junita_walter@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 18:06:32.755096"], ["updated_at", "2019-01-06 18:06:32.755096"], ["password_digest", "$2a$10$iolIWEF4.RxBQl7PfZRhQ.n01X/aC/jrFltgaf/wKr31bgi5zJCf."]]
+  [1m[35m (28.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Dr. Gerardo Vandervort"], ["employee_id", 3], ["created_at", "2019-01-06 18:06:32.785842"], ["updated_at", "2019-01-06 18:06:32.785842"]]
+  [1m[35m (22.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "virgil.bartell@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Quentin Abshire"], ["email", "virgil.bartell@hotmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 18:06:32.901211"], ["updated_at", "2019-01-06 18:06:32.901211"], ["password_digest", "$2a$10$Bzf4IvY7mC/9szyPScVc9.H/DY3esBqK2qwarGoxmJEgG30MGrzTm"]]
+  [1m[35m (31.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Minh Barrows DVM"], ["employee_id", 4], ["created_at", "2019-01-06 18:06:32.934958"], ["updated_at", "2019-01-06 18:06:32.934958"]]
+  [1m[35m (22.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "deon.schoen@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ms. Alma Dickens"], ["email", "deon.schoen@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 18:06:33.049167"], ["updated_at", "2019-01-06 18:06:33.049167"], ["password_digest", "$2a$10$7lI475hiyH.8EKUfwZANXOr4KsifKL2D9PddfMLfPSu9nxhOmJRMa"]]
+  [1m[35m (32.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Laurene Grady"], ["employee_id", 5], ["created_at", "2019-01-06 18:06:33.084361"], ["updated_at", "2019-01-06 18:06:33.084361"]]
+  [1m[35m (22.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/login" for 127.0.0.1 at 2019-01-06 23:36:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#verify_login as HTML
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 233ms (Views: 223.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login?utf8=%E2%9C%93&employee%5Bemail%5D=navinkumar2508%40gmail.com&employee%5Bpassword%5D=[FILTERED]&commit=Log+in" for 127.0.0.1 at 2019-01-06 23:36:56 +0530
+Processing by EmployeesController#verify_login as HTML
+  Parameters: {"utf8"=>"✓", "employee"=>{"email"=>"navinkumar2508@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 148ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:36:56 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 57ms (Views: 46.9ms | ActiveRecord: 7.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (1535.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_development"[0m
+  [1m[35m (336.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_test"[0m
+  [1m[35m (822.1ms)[0m  [1m[35mCREATE DATABASE "planner_development" ENCODING = 'unicode'[0m
+  [1m[35m (833.7ms)[0m  [1m[35mCREATE DATABASE "planner_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (126.2ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (131.2ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (79.0ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (35.0ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (154.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (32.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (24.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (130.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 18:08:58.057386"], ["updated_at", "2019-01-06 18:08:58.057386"]]
+  [1m[35m (25.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (211.5ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (131.6ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (79.5ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (34.5ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (176.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (152.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (38.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (130.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 18:08:59.101049"], ["updated_at", "2019-01-06 18:08:59.101049"]]
+  [1m[35m (27.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-01-06 18:08:59.137990"], ["key", "environment"]]
+  [1m[35m (25.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Navin"], ["email", "navinkumar2508@gmail.com"], ["type", "EmployeeManager"], ["created_at", "2019-01-06 18:08:59.315282"], ["updated_at", "2019-01-06 18:08:59.315282"], ["password_digest", "$2a$10$DBOv/qqYlYWYBLi4/1o2NuGrJK4vOICTjyeWyDlExN4jxamQgu3PO"]]
+  [1m[35m (29.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "britany_hirthe@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Phung Wolf"], ["email", "britany_hirthe@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 18:09:00.171442"], ["updated_at", "2019-01-06 18:09:00.171442"], ["password_digest", "$2a$10$f/dipDaLSCYZbDuOsNvO0eKZ3DWalmmdO0C0sNszmLI34Fs7BTM.a"]]
+  [1m[35m (121.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "jerilyn_rowe@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Deandre Torphy"], ["email", "jerilyn_rowe@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 18:09:00.399772"], ["updated_at", "2019-01-06 18:09:00.399772"], ["password_digest", "$2a$10$joG5v9oN98b7hsI1jZBwOufjf7b927/3tzp/CXOxVzFp007nQjI9q"]]
+  [1m[35m (30.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "brent.quigley@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Rochell Runolfsson"], ["email", "brent.quigley@hotmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 18:09:00.515514"], ["updated_at", "2019-01-06 18:09:00.515514"], ["password_digest", "$2a$10$r0PEC/ZVIYVcr5UV.UM.o.8z9AZMzQVe/SBUmsCLkZ.S/AR4m6GdW"]]
+  [1m[35m (28.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "roselee@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Joana Torphy"], ["email", "roselee@hotmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 18:09:00.629035"], ["updated_at", "2019-01-06 18:09:00.629035"], ["password_digest", "$2a$10$bdI1eNFRkL8wQPjA1bP3MupXzK3FUl5FhB/cGKRj.yY4m6Zz2Np9S"]]
+  [1m[35m (28.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "frankie@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mose Huels"], ["email", "frankie@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 18:09:00.747170"], ["updated_at", "2019-01-06 18:09:00.747170"], ["password_digest", "$2a$10$5jsaEs4ZK.MTZ54sTAOYYOdXjhxF4meGtfl7XMq/.KLXmd9kA9/Te"]]
+  [1m[35m (23.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Dion Rowe"], ["employee_id", 1], ["created_at", "2019-01-06 18:09:00.792131"], ["updated_at", "2019-01-06 18:09:00.792131"]]
+  [1m[35m (24.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Jere Heidenreich"], ["employee_id", 2], ["created_at", "2019-01-06 18:09:00.819858"], ["updated_at", "2019-01-06 18:09:00.819858"]]
+  [1m[35m (22.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Malissa Altenwerth"], ["employee_id", 3], ["created_at", "2019-01-06 18:09:00.845756"], ["updated_at", "2019-01-06 18:09:00.845756"]]
+  [1m[35m (31.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Mei Zulauf"], ["employee_id", 4], ["created_at", "2019-01-06 18:09:00.881800"], ["updated_at", "2019-01-06 18:09:00.881800"]]
+  [1m[35m (30.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Aleen Boyer"], ["employee_id", 5], ["created_at", "2019-01-06 18:09:00.918004"], ["updated_at", "2019-01-06 18:09:00.918004"]]
+  [1m[35m (29.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Deja Emard"], ["employee_id", 6], ["created_at", "2019-01-06 18:09:00.953339"], ["updated_at", "2019-01-06 18:09:00.953339"]]
+  [1m[35m (30.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:39:09 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (9.2ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 200ms (Views: 187.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:39:13 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (2.2ms)
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 46.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:39:15 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 70ms (Views: 50.5ms | ActiveRecord: 11.8ms)
+
+
+Started POST "/finalize" for 127.0.0.1 at 2019-01-06 23:39:28 +0530
+Processing by EmployeesController#finalize as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"02/pBWzX7+y1qMu7d24OdFJ59X+mRfBoXN0A/OdM37HqByhZYd9TlGVT0VwvXzRwOCHFfz27Ur+yYTyxdG2bzA==", "commit"=>"Finalize", "employee_id"=>"6"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.0.7.1) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.0.7.1) lib/action_controller/metal/request_forgery_protection.rb:223:in `handle_unverified_request'
+actionpack (5.0.7.1) lib/action_controller/metal/request_forgery_protection.rb:218:in `verify_authenticity_token'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.0ms)
+Started POST "/finalize" for 127.0.0.1 at 2019-01-06 23:39:44 +0530
+Processing by EmployeesController#finalize as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N6TYCp92KitK0nH0CgLLGo1zGnqEaGEoZF0idR1/3t8OlRVpGOtScHYs6nnBz0FuxMVBt6fse+FLcbN0tPpdwA==", "commit"=>"Finalize", "employee_id"=>"5"}
+  [1m[36mEmployeeMember Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember') AND "employees"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  Rendering notification_mailer/finalize_mailer.html.erb within layouts/mailer
+  Rendered notification_mailer/finalize_mailer.html.erb within layouts/mailer (0.7ms)
+NotificationMailer#finalize_mailer: processed outbound mail in 193.1ms
+Sent mail to roselee@hotmail.com (17.8ms)
+Date: Sun, 06 Jan 2019 23:39:44 +0530
+From: info@lunch.com
+To: roselee@hotmail.com
+Message-ID: <5c324468e7578_63c2aeb80b6328049620@saawan.mail>
+Subject: Ready for Party!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /></meta>
+<h1>Get Ready to party Hard</h1>
+<h2>Joana Torphy</h2>
+<pre>
+	Hi, roselee@hotmail.com
+
+	Reach us @ Aleen Boyer.
+</pre>
+  </body>
+</html>
+
+  Rendering employees/finalize.html.erb within layouts/application
+  Rendered employees/finalize.html.erb within layouts/application (0.6ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 416ms (Views: 50.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:39:54 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.6ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:39:56 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 56ms (Views: 46.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/js/bootstrap.bundle.min.js.map" for 127.0.0.1 at 2019-01-06 23:40:22 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.bundle.min.js.map"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (35.2ms)
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (91.6ms)
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.6ms)
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (200.2ms)
+Started GET "/js/bootstrap.bundle.min.js.map" for 127.0.0.1 at 2019-01-06 23:40:22 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.bundle.min.js.map"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (10.4ms)
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.8ms)
+Started POST "/finalize" for 127.0.0.1 at 2019-01-06 23:41:16 +0530
+Processing by EmployeesController#finalize as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QlIpIKRewvPwSqGOpXAMkFfk+LVjzvyE0cdb7c/5f+t7Ouh8qVZ+iyCxu2n9QTaUPbzItfgwXlM/e2egXNg7lg==", "commit"=>"Finalize", "employee_id"=>"6"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.0.7.1) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.0.7.1) lib/action_controller/metal/request_forgery_protection.rb:223:in `handle_unverified_request'
+actionpack (5.0.7.1) lib/action_controller/metal/request_forgery_protection.rb:218:in `verify_authenticity_token'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.7.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.7.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.7.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.7.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.7.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.7.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.7.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.7.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.7.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.7.1) lib/action_dispatch/routing/route_set.rb:727:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.7.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (1745.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_development"[0m
+  [1m[35m (337.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "planner_test"[0m
+  [1m[35m (862.4ms)[0m  [1m[35mCREATE DATABASE "planner_development" ENCODING = 'unicode'[0m
+  [1m[35m (777.1ms)[0m  [1m[35mCREATE DATABASE "planner_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (192.4ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (131.5ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (79.6ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (34.4ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (131.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (22.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (24.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (128.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 18:13:22.418592"], ["updated_at", "2019-01-06 18:13:22.418592"]]
+  [1m[35m (26.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (143.8ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "password_digest" character varying)[0m
+  [1m[35m (288.7ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (80.0ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places" USING btree ("employee_id")[0m
+  [1m[35m (34.2ms)[0m  [1m[35mALTER TABLE "places" ADD CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+[0m
+  [1m[35m (155.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (32.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190105155603)[0m
+  [1m[35m (24.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190105142324),
+(20190105142257),
+(20190105154114),
+(20190105151428),
+(20190105155444);
+
+[0m
+  [1m[35m (130.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-06 18:13:23.412641"], ["updated_at", "2019-01-06 18:13:23.412641"]]
+  [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-01-06 18:13:23.449604"], ["key", "environment"]]
+  [1m[35m (25.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Navin"], ["email", "navinkumar2508@gmail.com"], ["type", "EmployeeManager"], ["created_at", "2019-01-06 18:13:23.644016"], ["updated_at", "2019-01-06 18:13:23.644016"], ["password_digest", "$2a$10$H4AwslsxsPn1rExgGW12DuXhEJ/yvIUDRXXrxKdakkvRUzq3jkFa2"]]
+  [1m[35m (24.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "yasmine_parisian@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tracee Goodwin"], ["email", "yasmine_parisian@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 18:13:24.496239"], ["updated_at", "2019-01-06 18:13:24.496239"], ["password_digest", "$2a$10$TC3UlD2CYt2BvJGwhEJwg.q7N1JZpCwTHpwixgIBKZ0ZORAFlgjcG"]]
+  [1m[35m (32.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "ping.wolf@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Marlon Cormier"], ["email", "ping.wolf@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 18:13:24.613296"], ["updated_at", "2019-01-06 18:13:24.613296"], ["password_digest", "$2a$10$PLv1PgKdG3fZw8b8W3DiNOqWkh/oTbOhKjFQWZLnmyAGrf0D6Xbem"]]
+  [1m[35m (29.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "wilton@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Johnnie Considine PhD"], ["email", "wilton@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 18:13:24.726797"], ["updated_at", "2019-01-06 18:13:24.726797"], ["password_digest", "$2a$10$GdbTQ31iGVD/Wz/fuWoY3OFxB6Xjse5lnSB3FXJgM7QpUtS6UFBku"]]
+  [1m[35m (29.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "korey_kshlerin@yahoo.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Aubrey VonRueden"], ["email", "korey_kshlerin@yahoo.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 18:13:24.840601"], ["updated_at", "2019-01-06 18:13:24.840601"], ["password_digest", "$2a$10$lkZd/npn7TTI2hkYvTWt1uT7tTfx0rckMJQHGD11opK357hbSHAGi"]]
+  [1m[35m (28.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Sigrid Cummings"], ["email", "leo@gmail.com"], ["type", "EmployeeMember"], ["created_at", "2019-01-06 18:13:24.953658"], ["updated_at", "2019-01-06 18:13:24.953658"], ["password_digest", "$2a$10$JDQspHG35iS2Ckxm5OrWO.ZL71BkSkmyc8H0Uk5reEvhxFXbXsCeW"]]
+  [1m[35m (29.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Willian Parker"], ["employee_id", 1], ["created_at", "2019-01-06 18:13:24.992622"], ["updated_at", "2019-01-06 18:13:24.992622"]]
+  [1m[35m (25.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Valentine Bins"], ["employee_id", 2], ["created_at", "2019-01-06 18:13:25.020851"], ["updated_at", "2019-01-06 18:13:25.020851"]]
+  [1m[35m (22.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Brett Kiehn Jr."], ["employee_id", 3], ["created_at", "2019-01-06 18:13:25.045901"], ["updated_at", "2019-01-06 18:13:25.045901"]]
+  [1m[35m (21.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Alana Lebsack"], ["employee_id", 4], ["created_at", "2019-01-06 18:13:25.071450"], ["updated_at", "2019-01-06 18:13:25.071450"]]
+  [1m[35m (30.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Chas Osinski"], ["employee_id", 5], ["created_at", "2019-01-06 18:13:25.107246"], ["updated_at", "2019-01-06 18:13:25.107246"]]
+  [1m[35m (30.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Mrs. Bert Nader"], ["employee_id", 6], ["created_at", "2019-01-06 18:13:25.143058"], ["updated_at", "2019-01-06 18:13:25.143058"]]
+  [1m[35m (30.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:44:12 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 283ms (Views: 230.2ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/js/bootstrap.bundle.min.js.map" for 127.0.0.1 at 2019-01-06 23:44:13 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.bundle.min.js.map"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered collection of /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (5.4ms)
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.0ms)
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.6ms)
+Started GET "/logout" for 127.0.0.1 at 2019-01-06 23:44:31 +0530
+Processing by EmployeesController#destroy_login as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:44:31 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:44:35 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (1.8ms)
+Filter chain halted as :verify_login rendered or redirected
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login?utf8=%E2%9C%93&employee%5Bemail%5D=leo%40gmail.com%09&employee%5Bpassword%5D=[FILTERED]&commit=Log+in" for 127.0.0.1 at 2019-01-06 23:44:43 +0530
+Processing by EmployeesController#verify_login as HTML
+  Parameters: {"utf8"=>"✓", "employee"=>{"email"=>"leo@gmail.com\t", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "leo@gmail.com\t"], ["LIMIT", 1]]
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 69ms (Views: 60.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login?utf8=%E2%9C%93&employee%5Bemail%5D=navinkumar2508%40gmail.com&employee%5Bpassword%5D=[FILTERED]&commit=Log+in" for 127.0.0.1 at 2019-01-06 23:44:58 +0530
+Processing by EmployeesController#verify_login as HTML
+  Parameters: {"utf8"=>"✓", "employee"=>{"email"=>"navinkumar2508@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navinkumar2508@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 91ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:44:58 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 34ms (Views: 28.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-01-06 23:45:06 +0530
+Processing by EmployeesController#destroy_login as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:45:06 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-06 23:45:08 +0530
+Processing by EmployeesController#verify_login as HTML
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login?utf8=%E2%9C%93&employee%5Bemail%5D=wilton%40yahoo.com%09&employee%5Bpassword%5D=[FILTERED]&commit=Log+in" for 127.0.0.1 at 2019-01-06 23:45:15 +0530
+Processing by EmployeesController#verify_login as HTML
+  Parameters: {"utf8"=>"✓", "employee"=>{"email"=>"wilton@yahoo.com\t", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "wilton@yahoo.com\t"], ["LIMIT", 1]]
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 57ms (Views: 51.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login?utf8=%E2%9C%93&employee%5Bemail%5D=wilton%40yahoo.com&employee%5Bpassword%5D=[FILTERED]&commit=Log+in" for 127.0.0.1 at 2019-01-06 23:45:59 +0530
+Processing by EmployeesController#verify_login as HTML
+  Parameters: {"utf8"=>"✓", "employee"=>{"email"=>"wilton@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mEmployee Load (1.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "wilton@yahoo.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 118ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:45:59 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 37ms (Views: 31.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:46:04 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.6ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:46:33 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (1.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 64ms (Views: 54.3ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 23:46:37 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (2.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 36ms (Views: 31.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/place?utf8=%E2%9C%93&place%5Bemployee_id%5D=4&place%5Bproposed_place%5D=BBQ&commit=Submit" for 127.0.0.1 at 2019-01-06 23:46:42 +0530
+Processing by EmployeesController#user_place as HTML
+  Parameters: {"utf8"=>"✓", "place"=>{"employee_id"=>"4", "proposed_place"=>"BBQ"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "BBQ"], ["employee_id", 4], ["created_at", "2019-01-06 18:16:42.574008"], ["updated_at", "2019-01-06 18:16:42.574008"]]
+  [1m[35m (195.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 215ms (ActiveRecord: 198.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:46:42 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (2.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 81ms (Views: 69.1ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-01-06 23:47:22 +0530
+Processing by EmployeesController#destroy_login as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:47:22 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 23:47:32 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (1.2ms)
+Filter chain halted as :verify_login rendered or redirected
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 23:47:35 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-06 23:47:38 +0530
+Processing by EmployeesController#verify_login as HTML
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login?utf8=%E2%9C%93&employee%5Bemail%5D=&employee%5Bpassword%5D=&commit=Log+in" for 127.0.0.1 at 2019-01-06 23:47:41 +0530
+Processing by EmployeesController#verify_login as HTML
+  Parameters: {"utf8"=>"✓", "employee"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.5ms)
+
+

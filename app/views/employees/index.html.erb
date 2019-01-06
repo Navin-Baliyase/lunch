@@ -6,7 +6,7 @@
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">Suggested Place</th>
-      <%if current_user && current_user.type == "EmployeeMangaer"%>
+      <%if current_user && current_user.type == "EmployeeManager"%>
       <th scope="col">Select</th>
       <%end%>
     </tr>
@@ -18,7 +18,7 @@
       <td><%= employee.name %></td>
       <td><%= employee.email %></td>
       <td><%= employee.place.proposed_place if employee.place %></td>
-      <%if current_user && current_user.type == "EmployeeMangaer"%>
+      <%if current_user && current_user.type == "EmployeeManager"%>
       <td>
         <%= radio_button_tag 'employee_id', employee.id if employee && employee.place && employee.place.proposed_place %>
       </td>
@@ -26,9 +26,11 @@
     </tr>
     <%end%>
   </tbody>
-  <%if current_user && current_user.type == "EmployeeMangaer"%>
+  <%if current_user && current_user.type == "EmployeeManager"%>
   <p class="button"><%= submit_tag "Finalize", {:class=>"btn btn-info pull-right"} %></p>
   <%end%>
   <%end%>
   <br>
+  <%if current_user && current_user.type == "EmployeeMember"%>
   <p class="button"><%= link_to 'Propose Place', place_path, {:class=>"btn btn-info"} %></p>
+  <%end%>

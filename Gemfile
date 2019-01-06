@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 #Preview email in the default browser instead of sending it
 gem "letter_opener", :group => :development
+#dummy data creation
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.7', '>= 5.0.7.1'
 # Use postgresql as the database for Active Record

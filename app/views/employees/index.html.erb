@@ -1,3 +1,4 @@
+<%= form_tag(finalize_path, method: "new") do %>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -5,17 +6,27 @@
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">Suggested Place</th>
+      <th scope="col">Select</th>
     </tr>
   </thead>
   <tbody>
+    
     <% @employee.each_with_index do |employee,index| %>
     <tr>
       <th scope="row"><%=index+1%></th>
       <td><%= employee.name %></td>
       <td><%= employee.email %></td>
       <td><%= employee.place.proposed_place if employee.place %></td>
+      <td><%#=select_tag "employee", options_from_collection_for_select(@employee, "id", "name")%>
+        
+        <%= radio_button_tag 'employee_id', employee.id if employee && employee.place && employee.place.proposed_place %>
+       
+      </td>
     </tr>
     <%end%>
+    
   </tbody>
+  <p class="button"><%= submit_tag "Submit" %></p>
+<%end%>
 <br>
-<%= link_to 'New Employee Suggestion', place_path %>
+<%= link_to 'Change Suggestion', place_path %>

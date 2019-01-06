@@ -1,12 +1,12 @@
 class EmployeesController < ApplicationController
-	before_action :verify_login, only: [:show, :update, :destroy]
+	before_action :verify_login, only: [:show, :update, :destroy, :index, :update_password]
 
 	def home
 
 	end
 
 	def verify_login
-		if !@current_user
+		if !current_user
 			if params[:employee] && params[:employee][:email] && params[:employee][:password]
 				@employee = Employee.authenticate(params[:employee][:email], params[:employee][:password])
 			end
@@ -17,8 +17,6 @@ class EmployeesController < ApplicationController
 				flash.now.alert = "Invalid email or password" if params[:employee]
 				render "verify_login"
 			end
-		else
-			redirect_to root_url
 		end
 		
 	end
@@ -42,23 +40,56 @@ class EmployeesController < ApplicationController
 
 	def create
 		@employee = EmployeeMember.new(employee_params)
-		if @employee.save!
-			redirect_to employees_path
+		if @employee.save
+			@url = request.host + @employee.id
+			NotificationMailer.notification_mailer(@employee,@url).deliver
+			redirect_to employees_path, :notice => 'Reset password mail successfully created.'
 		else
+			flash.now.alert = "Email Already Taken"
 			render 'new'
 		end
 	end
 
-	def User_place
-		@employee = EmployeeMember.new(employee_params)
-		if @employee.save!
-			@place = Place.new(place_params)
-			redirect_to employees_path
-		else
-			render 'index'
-		end
-
+	def update_password
+		@employee.update_attributes(params[:employee][:password]) if params[:employee] && params[:employee][:password]
+		redirect_to root_url, :notice => 'password reset sucessfully'
 	end
+
+	def reset_password
+		@employee = EmployeeMember.where(id: params[:value]) if params[:value]
+		if !@employee.blank?
+			render 'update_password'
+			#@employee.update_attributes(params[:password]) if params[:password]
+			#redirect_to root_url, :notice => 'password reset sucessfully'
+		else
+			flash.now.alert = "You are not authorised to perform the action"
+		end
+	end
+
+	def user_place
+		if params[:place]
+			@place = Place.new(place_params)
+			if @place.save
+				flash.now.alert = "Thanks for your Suggestion"
+				redirect_to employees_path
+			else
+				flash.now.alert = "Something went wrong"
+				redirect_to root_url
+			end
+		end
+	end
+
+	def finalize
+	  employee = EmployeeMember.find(params[:employee_id])
+	  if employee
+	  	@employee_name = employee.name
+	  	@employee_email = employee.email
+	  	@employee_suggestion = employee.place.proposed_place
+	  	NotificationMailer.finalize_mailer(@employee_name,@employee_email,@employee_suggestion).deliver
+		flash.now.alert = 'Request email sent to all employees'
+	  end
+	end
+
 
 	private
 	
@@ -67,6 +98,7 @@ class EmployeesController < ApplicationController
 	end
 
 	def place_params
-		params.require(:place).permit(:proposed_place, employee_id: @employee.id)
+		params.require(:place).permit(:employee_id, :proposed_place)
 	end
+
 end

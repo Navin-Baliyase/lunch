@@ -40,6 +40,8 @@ class EmployeesController < ApplicationController
 	def create
 		@employee = EmployeeMember.new(employee_params)
 		if @employee.save
+			#For now sending mail to single employee
+			#We can loop email and send mail to all employees and can run it as delayed Job
 			NotificationMailer.notification_mailer(@employee).deliver
 			redirect_to employees_path, :notice => 'Reset password mail successfully created.'
 		else

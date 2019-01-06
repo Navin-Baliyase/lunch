@@ -1,3 +1,2 @@
-class EmployeeMember < Employee
-   
+class EmployeeMember < Employee  
 end

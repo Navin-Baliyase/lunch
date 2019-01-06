@@ -1,0 +1,252 @@
+  [1m[35m (21.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6292888912983678075);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (72.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateEmployees (20190105142257)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (368.0ms)[0m  [1m[35mCREATE TABLE "employees" ("id" serial primary key, "name" character varying, "email" character varying, "password" character varying, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190105142257"]]
+  [1m[35m (30.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePlaces (20190105142324)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (119.8ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "proposed_place" character varying, "employee_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_b27c12fd7c"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+)[0m
+  [1m[35m (63.1ms)[0m  [1m[35mCREATE  INDEX  "index_places_on_employee_id" ON "places"  ("employee_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190105142324"]]
+  [1m[35m (32.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddPassordToEmployee (20190105151428)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "employees" ADD "password_hash" character varying[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "employees" ADD "password_salt" character varying[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190105151428"]]
+  [1m[35m (41.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddPassordDigestToEmployee (20190105154114)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "employees" ADD "password_digest" character varying[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190105154114"]]
+  [1m[35m (41.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemovePassordToEmployee (20190105155444)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "employees" DROP "password_hash"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "employees" DROP "password_salt"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190105155444"]]
+  [1m[35m (37.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemovePassordhashToEmployee (20190105155603)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "employees" DROP "password"[0m
+  [1m[35mSQL (9.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190105155603"]]
+  [1m[35m (30.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (116.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6292888912983678075)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 15:25:12.705275"], ["updated_at", "2019-01-06 15:25:12.705275"], ["password_digest", "$2a$04$.bRPkyxIrQmJT0QcrTy0o.zV4asMzI1CPbNNY5od1/GRf24bKTIQm"]]
+  [1m[35m (127.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (119.4ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 15:25:30.929437"], ["updated_at", "2019-01-06 15:25:30.929437"], ["password_digest", "$2a$04$aVclitpLRPOdmLpLVFfONOshxJixj56k0byB3J3Q5K2Hk1KyU1ney"]]
+  [1m[35m (27.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (217.7ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 15:29:07.427561"], ["updated_at", "2019-01-06 15:29:07.427561"], ["password_digest", "$2a$04$5.Y91rYovRLpVs.Plo86yOKoXZRaivgA5u76gHeNWCEvUgqzkzOWe"]]
+  [1m[35m (45.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (31.9ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 15:29:48.750304"], ["updated_at", "2019-01-06 15:29:48.750304"], ["password_digest", "$2a$04$B7UdPI5mhJFEGAJJxKFadOLfvRrc7M04LHxTKyXhVPvaNbS5KO9nu"]]
+  [1m[35m (162.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (151.0ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 15:30:29.107131"], ["updated_at", "2019-01-06 15:30:29.107131"], ["password_digest", "$2a$04$sXZLJypdbkeZE9/B2XcmA.QjVGSk6LRPh6nxsRlZORw6iN..p.scO"]]
+  [1m[35m (94.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (67.2ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 15:44:59.031333"], ["updated_at", "2019-01-06 15:44:59.031333"], ["password_digest", "$2a$04$qEkvjAJCgiDbx5a5WBtUGuiXlcIWHFIElufM4PLowps1P21pLsgW6"]]
+  [1m[35m (117.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (31.8ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 15:45:28.854043"], ["updated_at", "2019-01-06 15:45:28.854043"], ["password_digest", "$2a$04$taqKiJu7rOL4ohskpLoBr.UNGwm5rgz3v0I3gcKk5U909F0Q0k/JO"]]
+  [1m[35m (123.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (31.8ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 15:50:13.108084"], ["updated_at", "2019-01-06 15:50:13.108084"], ["password_digest", "$2a$04$ZhUDzYrPLlq9pUJknUfw/O7Ma1yBadImkO1wwZSRpeHaNc3xkoEgS"]]
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (22.3ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 15:50:33.470061"], ["updated_at", "2019-01-06 15:50:33.470061"], ["password_digest", "$2a$04$4L/1jzAH1VzdSM0oXJcyCOwHdVN91HOuIxZ31vo9WSC5VBk33arfe"]]
+  [1m[35m (125.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (134.2ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 16:00:15.178820"], ["updated_at", "2019-01-06 16:00:15.178820"], ["password_digest", "$2a$04$M1WFWJhmqLNWwtXt0iM1buL7qBE/7JPvGyp1Uk/Z8BkeV0bP0mYQK"]]
+  [1m[35m (98.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (37.1ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 16:00:15.349656"], ["updated_at", "2019-01-06 16:00:15.349656"], ["password_digest", "$2a$04$YVtM3e.G8EUMnJWW5SeXM.Q5SqrQOZf7mEc0mv6yOc1dBarY4NDBG"]]
+  [1m[35m (26.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (116.4ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 16:01:00.254195"], ["updated_at", "2019-01-06 16:01:00.254195"], ["password_digest", "$2a$04$lmYz9LEcttJEUSNVRKz4FOAqIgjvvQ7N4dRHB0GsgfNaZ23EC6.Fi"]]
+  [1m[35m (29.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (32.8ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 16:01:00.366283"], ["updated_at", "2019-01-06 16:01:00.366283"], ["password_digest", "$2a$04$.wi5kQ5jHNJFRbXsIavFPe8ZrB7xVWzBDmsOultPmM7XReiYALYpq"]]
+  [1m[35m (23.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (116.5ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 16:01:18.426918"], ["updated_at", "2019-01-06 16:01:18.426918"], ["password_digest", "$2a$04$5kV4XaEBQWAyoAZYSUe.5uZscSjoL1XGF6BnDMu0YXJpIGtBPwmYK"]]
+  [1m[35m (33.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (32.6ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 16:01:18.521875"], ["updated_at", "2019-01-06 16:01:18.521875"], ["password_digest", "$2a$04$2pTYkk/Rvn0e74NmY7xLTeWa.7UNz.4LIzyrbXr.HeW9a.orulPIm"]]
+  [1m[35m (112.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (126.9ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 16:01:42.530628"], ["updated_at", "2019-01-06 16:01:42.530628"], ["password_digest", "$2a$04$XphG2mwG27O9JNsfhEHFhOFEalty3baLHcMc.9zDTjxibFpDbzrQi"]]
+  [1m[35m (28.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (23.0ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 16:01:42.612831"], ["updated_at", "2019-01-06 16:01:42.612831"], ["password_digest", "$2a$04$dj4W43R8mhFktTUS0u76luSVhFV8lxP/T6ptoGJQEK0eGWpr2/rKe"]]
+  [1m[35m (112.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (118.4ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 16:01:47.828048"], ["updated_at", "2019-01-06 16:01:47.828048"], ["password_digest", "$2a$04$as9W1l3C56V9j95TevWX.OOanAE.WKs40zmMW7ZIgA9QbmAiRoaQi"]]
+  [1m[35m (22.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (22.6ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 16:01:47.902247"], ["updated_at", "2019-01-06 16:01:47.902247"], ["password_digest", "$2a$04$2kTm37qgUpGzbCPu6kRQAOM1v1DtaL8/YzOP6eENOfK9hyCFkJRxS"]]
+  [1m[35m (31.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "naviqqn@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "naviqqn@kreatio.com"], ["created_at", "2019-01-06 16:01:47.942615"], ["updated_at", "2019-01-06 16:01:47.942615"], ["password_digest", "$2a$04$n0PLZrzBAy6k5.5JvQoCAuVt/LlWWhL6SOFYRUF5zkBf..sDCvRCW"]]
+  [1m[35m (26.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (35.6ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 16:02:09.385841"], ["updated_at", "2019-01-06 16:02:09.385841"], ["password_digest", "$2a$04$O9HGrhLI6CvIeFpuBxLbKO1gBuCONz0glLGvnF3qTk.bA8lQm5d5u"]]
+  [1m[35m (31.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (32.7ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 16:02:09.481071"], ["updated_at", "2019-01-06 16:02:09.481071"], ["password_digest", "$2a$04$PjNvutzj/doSf.iUAxz5FehwvebIMqbeXCOydOeNVskVewJDOW33."]]
+  [1m[35m (30.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (118.6ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 16:02:28.980673"], ["updated_at", "2019-01-06 16:02:28.980673"], ["password_digest", "$2a$04$J2c9DPge7hPs7dlu/FK.seOn.ugeOTLw8DG2oOH5pF8zv/FnFZWym"]]
+  [1m[35m (33.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (123.1ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 16:09:38.253865"], ["updated_at", "2019-01-06 16:09:38.253865"], ["password_digest", "$2a$04$5lPkbmv9gsoCUw5mmPBa2Of/hfYPZOHmbmLETRHvDicB7QfIYSMAq"]]
+  [1m[35m (26.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (22.7ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "employees"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "employees" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "navin@kreatio.com"], ["created_at", "2019-01-06 16:09:38.338976"], ["updated_at", "2019-01-06 16:09:38.338976"], ["password_digest", "$2a$04$JzaUY/LodRxjQOpSegIq/.Qg.nyEu5EQX4CbehEEAqh/fmq9fTmBy"]]
+  [1m[35m (24.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "navin@kreatio.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m

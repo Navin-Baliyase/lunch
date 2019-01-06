@@ -1,9 +1,9 @@
-<h1>New Place</h1>
+<h2>Suggest New Place</h2>
 <%= form_tag(place_path, method: "get") do %>
 <%= hidden_field_tag "place[employee_id]", current_user.id%>
   <p>
     <%= label_tag :suggested_place %><br />
     <%= text_field_tag "place[proposed_place]" %>
   </p>
-   <p class="button"><%= submit_tag "Submit" %></p>
+   <p class="button"><%= submit_tag "Submit", {:class => "btn btn-info"} %></p>
 <% end %>

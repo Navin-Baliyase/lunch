@@ -1,3 +1,2 @@
-class EmployeeManager < Employee
-	
+class EmployeeManager < Employee	
 end

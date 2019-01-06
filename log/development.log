@@ -11051,3 +11051,2795 @@ Reach us @ Kabab Magic.
 Completed 200 OK in 80ms (Views: 36.8ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:04:07 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (2.1ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 260ms (Views: 247.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:06:18 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.1ms)
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 51.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:08:37 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.9ms)
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 63.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:12:23 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.7ms)
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 69.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:15:04 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.2ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 83.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/js/bootstrap.bundle.min.js.map" for 127.0.0.1 at 2019-01-06 19:16:05 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.bundle.min.js.map"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered collection of /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (11.4ms)
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.2ms)
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.1ms)
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:18:43 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.4ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 81.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:18:46 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.6ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:18:47 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.2ms)
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 63.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:18:47 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.5ms)
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:18:47 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.3ms)
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:18:47 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.4ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:18:48 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.8ms)
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 60.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:18:48 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.2ms)
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 67.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:19:41 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.9ms)
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:19:43 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.6ms)
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:25:44 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.2ms)
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 71.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:26:04 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.3ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 81.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:27:15 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.5ms)
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 64.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:27:40 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.2ms)
+  [1m[36mEmployee Load (1.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 68.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:29:31 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.6ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:30:06 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.2ms)
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 94ms (Views: 91.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:43:55 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.0ms)
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 64.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:44:12 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.8ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 71.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 19:44:36 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (106.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (1536.6ms)
+Completed 200 OK in 1573ms (Views: 1381.4ms | ActiveRecord: 176.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:46:37 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.5ms)
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 19:46:41 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (1.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 72ms (Views: 57.1ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-01-06 19:47:07 +0530
+Processing by EmployeesController#destroy_login as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 19:47:07 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 148ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-06 19:47:15 +0530
+Processing by EmployeesController#verify_login as HTML
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login?utf8=%E2%9C%93&employee%5Bemail%5D=megha%40gmail.com&employee%5Bpassword%5D=[FILTERED]&commit=Log+in" for 127.0.0.1 at 2019-01-06 19:47:26 +0530
+Processing by EmployeesController#verify_login as HTML
+  Parameters: {"utf8"=>"✓", "employee"=>{"email"=>"megha@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "megha@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 578ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 19:47:27 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (1.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 41ms (Views: 34.1ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 19:54:22 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 78ms (Views: 61.2ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/js/bootstrap.bundle.min.js.map" for 127.0.0.1 at 2019-01-06 19:54:34 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.bundle.min.js.map"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (96.3ms)
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (116.0ms)
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 19:56:20 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (1.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (64.4ms)
+Completed 200 OK in 107ms (Views: 88.9ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 19:57:08 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (2.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (59.9ms)
+Completed 200 OK in 116ms (Views: 94.1ms | ActiveRecord: 12.9ms)
+
+
+Started POST "/finalize" for 127.0.0.1 at 2019-01-06 19:59:37 +0530
+Processing by EmployeesController#finalize as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i2rR1o3KjIqubhOq7RIr/etVvBqQbccrj5dtN1s2YZ2yWxy1Clf00ZKQiCcm36GJouPn17Pp3eKgu/w28rPigg==", "commit"=>"Finalize", "employee_id"=>"6"}
+  [1m[36mEmployeeMember Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember') AND "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  Rendering notification_mailer/finalize_mailer.html.erb within layouts/mailer
+  Rendered notification_mailer/finalize_mailer.html.erb within layouts/mailer (0.7ms)
+NotificationMailer#finalize_mailer: processed outbound mail in 259.0ms
+Sent mail to megha@gmail.com (141.1ms)
+Date: Sun, 06 Jan 2019 19:59:39 +0530
+From: info@lunch.com
+To: megha@gmail.com
+Message-ID: <5c3210d35db50_586c2b0a071618903266d@saawan.mail>
+Subject: Ready for Party!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /></meta>
+<h1>Get Ready to party Hard</h1>
+<h2>megha</h2>
+<pre>
+Hi, megha@gmail.com
+
+Reach us @ Kabab Magic.
+</pre>
+  </body>
+</html>
+
+  Rendering employees/finalize.html.erb within layouts/application
+  Rendered employees/finalize.html.erb within layouts/application (1.2ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 1586ms (Views: 28.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 20:10:09 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 110ms (Views: 37.0ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 20:10:41 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.4ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 20:10:51 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (2.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (68.2ms)
+Completed 200 OK in 104ms (Views: 80.2ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 21:39:55 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (118.2ms)
+Completed 200 OK in 586ms (Views: 492.0ms | ActiveRecord: 15.2ms)
+
+
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 21:43:39 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 116ms (Views: 94.8ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 21:44:29 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (1.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (64.3ms)
+Completed 200 OK in 111ms (Views: 91.4ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 21:45:08 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (47.6ms)
+Completed 200 OK in 85ms (Views: 68.2ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 21:45:28 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 44ms (Views: 36.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 21:45:31 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (5.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (43.7ms)
+Completed 200 OK in 75ms (Views: 54.6ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 21:45:34 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 66ms (Views: 53.5ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 21:45:38 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/place?utf8=%E2%9C%93&place%5Bemployee_id%5D=6&place%5Bproposed_place%5D=Meghana&commit=Submit" for 127.0.0.1 at 2019-01-06 21:46:04 +0530
+Processing by EmployeesController#user_place as HTML
+  Parameters: {"utf8"=>"✓", "place"=>{"employee_id"=>"6", "proposed_place"=>"Meghana"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (34.8ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Meghana"], ["employee_id", 6], ["created_at", "2019-01-06 16:16:04.295800"], ["updated_at", "2019-01-06 16:16:04.295800"]]
+  [1m[35m (157.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 211ms (ActiveRecord: 193.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 21:46:04 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (54.6ms)
+Completed 200 OK in 97ms (Views: 79.2ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 21:46:40 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.8ms)
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 21:48:00 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (2.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (73.1ms)
+Completed 200 OK in 106ms (Views: 86.6ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 21:48:03 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (5.0ms)
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 77.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 21:49:07 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (2.0ms)
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 63.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 21:49:13 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 42ms (Views: 35.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 21:50:45 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.1ms)
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 21:51:17 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (2.0ms)
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 21:51:19 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.1ms)
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 48.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 21:51:42 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (2.8ms)
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 72.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 21:51:44 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (2.0ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 56.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 21:52:32 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.9ms)
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 77.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 21:52:50 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 49ms (Views: 40.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 21:52:52 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (2.1ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 69.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 21:53:22 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (3.2ms)
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 57.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 21:53:38 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (3.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (2.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (55.6ms)
+Completed 200 OK in 104ms (Views: 86.2ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 21:55:05 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.5ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 22:01:03 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.7ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:05:50 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (2.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 70ms (Views: 56.4ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:07:50 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 45ms (Views: 35.3ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:08:11 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (61.8ms)
+Completed 200 OK in 102ms (Views: 81.8ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:08:13 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:10:30 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (2.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (63.4ms)
+Completed 200 OK in 120ms (Views: 100.2ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 22:20:42 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (5.5ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 222ms (Views: 198.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 22:20:46 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.1ms)
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 22:20:46 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.1ms)
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 53.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 22:20:46 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.1ms)
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 121ms (Views: 118.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 22:21:31 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.8ms)
+  [1m[36mEmployee Load (1.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 75.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:22:15 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 70ms (Views: 57.4ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:22:25 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 37ms (Views: 33.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:24:19 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:25:06 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (2.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 92ms (Views: 87.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:26:46 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 70ms (Views: 65.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:27:05 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 76ms (Views: 71.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:27:27 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 62ms (Views: 56.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:27:40 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (1.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 61ms (Views: 57.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:28:06 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 48ms (Views: 40.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 22:28:13 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.7ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:28:17 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 67ms (Views: 53.9ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-01-06 22:29:12 +0530
+Processing by EmployeesController#destroy_login as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 22:29:12 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-06 22:29:21 +0530
+Processing by EmployeesController#verify_login as HTML
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-06 22:30:18 +0530
+Processing by EmployeesController#verify_login as HTML
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login?utf8=%E2%9C%93&employee%5Bemail%5D=&employee%5Bpassword%5D=&commit=Log+in" for 127.0.0.1 at 2019-01-06 22:30:27 +0530
+Processing by EmployeesController#verify_login as HTML
+  Parameters: {"utf8"=>"✓", "employee"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 42ms (Views: 36.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/login?utf8=%E2%9C%93&employee%5Bemail%5D=&employee%5Bpassword%5D=&commit=Log+in" for 127.0.0.1 at 2019-01-06 22:30:33 +0530
+Processing by EmployeesController#verify_login as HTML
+  Parameters: {"utf8"=>"✓", "employee"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 65ms (Views: 58.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-06 22:30:39 +0530
+Processing by EmployeesController#verify_login as HTML
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login?utf8=%E2%9C%93&employee%5Bemail%5D=megha%40gmail.com&employee%5Bpassword%5D=[FILTERED]&commit=Log+in" for 127.0.0.1 at 2019-01-06 22:30:50 +0530
+Processing by EmployeesController#verify_login as HTML
+  Parameters: {"utf8"=>"✓", "employee"=>{"email"=>"megha@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "megha@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 100ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:30:50 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 55ms (Views: 47.1ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:31:02 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 38ms (Views: 31.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2019-01-06 22:31:29 +0530
+Processing by EmployeesController#destroy_login as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 22:31:29 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 46ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 22:32:02 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 67ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-06 22:32:06 +0530
+Processing by EmployeesController#verify_login as HTML
+  Rendering employees/verify_login.html.erb within layouts/application
+  Rendered employees/verify_login.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 62ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login?utf8=%E2%9C%93&employee%5Bemail%5D=megha%40gmail.com&employee%5Bpassword%5D=[FILTERED]&commit=Log+in" for 127.0.0.1 at 2019-01-06 22:32:17 +0530
+Processing by EmployeesController#verify_login as HTML
+  Parameters: {"utf8"=>"✓", "employee"=>{"email"=>"megha@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."email" = $1 LIMIT $2[0m  [["email", "megha@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 87ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:32:17 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 38ms (Views: 32.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:32:39 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 41ms (Views: 37.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/place?utf8=%E2%9C%93&place%5Bemployee_id%5D=6&place%5Bproposed_place%5D=&commit=Submit" for 127.0.0.1 at 2019-01-06 22:32:42 +0530
+Processing by EmployeesController#user_place as HTML
+  Parameters: {"utf8"=>"✓", "place"=>{"employee_id"=>"6", "proposed_place"=>""}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Load (4.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", ""], ["employee_id", 6], ["created_at", "2019-01-06 17:02:42.343722"], ["updated_at", "2019-01-06 17:02:42.343722"]]
+  [1m[35m (114.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 133ms (ActiveRecord: 120.6ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:32:42 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 69ms (Views: 52.0ms | ActiveRecord: 10.4ms)
+
+
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" ORDER BY "places"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:34:31 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/place?utf8=%E2%9C%93&place%5Bemployee_id%5D=6&place%5Bproposed_place%5D=&commit=Submit" for 127.0.0.1 at 2019-01-06 22:34:33 +0530
+Processing by EmployeesController#user_place as HTML
+  Parameters: {"utf8"=>"✓", "place"=>{"employee_id"=>"6", "proposed_place"=>""}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 102ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 22:34:33 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (2.3ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:39:47 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 56ms (Views: 36.1ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:39:50 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/place?utf8=%E2%9C%93&place%5Bemployee_id%5D=6&place%5Bproposed_place%5D=&commit=Submit" for 127.0.0.1 at 2019-01-06 22:39:57 +0530
+Processing by EmployeesController#user_place as HTML
+  Parameters: {"utf8"=>"✓", "place"=>{"employee_id"=>"6", "proposed_place"=>""}, "commit"=>"Submit"}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 22:39:57 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (0.5ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:41:33 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 55ms (Views: 36.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:41:35 +0530
+Processing by EmployeesController#user_place as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/employees_controller.rb:70:in `user_place'
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/saawan/.rvm/gems/ruby-2.6.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.6ms)
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:42:01 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 22:42:01 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.9ms)
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 106ms (Views: 94.3ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:42:03 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 50ms (Views: 37.4ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:42:05 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-06 22:42:05 +0530
+Processing by EmployeesController#home as HTML
+  Rendering employees/home.html.erb within layouts/application
+  Rendered employees/home.html.erb within layouts/application (1.2ms)
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:44:26 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (0.8ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 296ms (Views: 261.7ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:27 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:27 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:28 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:33 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:42 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:44:43 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:45:43 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (58.8ms)
+Completed 200 OK in 362ms (Views: 302.6ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:47 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:45:52 +0530
+Processing by EmployeesController#user_place as HTML
+Redirected to http://localhost:3000/place
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:46:22 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 266ms (Views: 249.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:46:24 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/place" for 127.0.0.1 at 2019-01-06 22:46:27 +0530
+Processing by EmployeesController#user_place as HTML
+  Rendering employees/user_place.html.erb within layouts/application
+  [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered employees/user_place.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 72ms (Views: 65.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/place?utf8=%E2%9C%93&place%5Bemployee_id%5D=6&place%5Bproposed_place%5D=Kabab+Magic&commit=Submit" for 127.0.0.1 at 2019-01-06 22:47:03 +0530
+Processing by EmployeesController#user_place as HTML
+  Parameters: {"utf8"=>"✓", "place"=>{"employee_id"=>"6", "proposed_place"=>"Kabab Magic"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "places" ("proposed_place", "employee_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["proposed_place", "Kabab Magic"], ["employee_id", 6], ["created_at", "2019-01-06 17:17:03.350237"], ["updated_at", "2019-01-06 17:17:03.350237"]]
+  [1m[35m (150.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/employees
+Completed 302 Found in 240ms (ActiveRecord: 166.7ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2019-01-06 22:47:03 +0530
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployeeMember Load (2.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."type" IN ('EmployeeMember')[0m
+  [1m[36mPlace Load (1.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 1], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 3], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 4], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 5], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 6], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 7], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 8], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 9], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 10], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."employee_id" = $1 LIMIT $2[0m  [["employee_id", 11], ["LIMIT", 1]]
+  Rendered employees/index.html.erb within layouts/application (58.8ms)
+Completed 200 OK in 106ms (Views: 88.1ms | ActiveRecord: 11.4ms)
+
+

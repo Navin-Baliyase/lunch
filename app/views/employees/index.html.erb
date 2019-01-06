@@ -6,27 +6,29 @@
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">Suggested Place</th>
+      <%if current_user && current_user.type == "EmployeeMangaer"%>
       <th scope="col">Select</th>
+      <%end%>
     </tr>
   </thead>
   <tbody>
-    
     <% @employee.each_with_index do |employee,index| %>
     <tr>
       <th scope="row"><%=index+1%></th>
       <td><%= employee.name %></td>
       <td><%= employee.email %></td>
       <td><%= employee.place.proposed_place if employee.place %></td>
-      <td><%#=select_tag "employee", options_from_collection_for_select(@employee, "id", "name")%>
-        
+      <%if current_user && current_user.type == "EmployeeMangaer"%>
+      <td>
         <%= radio_button_tag 'employee_id', employee.id if employee && employee.place && employee.place.proposed_place %>
-       
       </td>
+      <%end%>
     </tr>
     <%end%>
-    
   </tbody>
-  <p class="button"><%= submit_tag "Submit" %></p>
-<%end%>
-<br>
-<%= link_to 'Change Suggestion', place_path %>
+  <%if current_user && current_user.type == "EmployeeMangaer"%>
+  <p class="button"><%= submit_tag "Finalize", {:class=>"btn btn-info pull-right"} %></p>
+  <%end%>
+  <%end%>
+  <br>
+  <p class="button"><%= link_to 'Propose Place', place_path, {:class=>"btn btn-info"} %></p>

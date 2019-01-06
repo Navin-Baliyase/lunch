@@ -6,12 +6,10 @@ class Employee < ApplicationRecord
 
   def self.authenticate(email, password)
    employee = Employee.find_by(email: email).try(:authenticate, password)
-   if employee
-    employee
-  else
-    nil
+    if employee
+      employee
+    else
+      nil
+    end
   end
-end
-
-
 end

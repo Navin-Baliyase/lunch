@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     get "reset/*value" => "employees#update_password", :as => "update"
     post "finalize" => "employees#finalize", :as => "finalize"
 	resources :employees
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

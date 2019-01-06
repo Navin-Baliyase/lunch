@@ -2,7 +2,6 @@ class EmployeesController < ApplicationController
 	before_action :verify_login, only: [:show, :update, :destroy, :index, :update_password]
 
 	def home
-
 	end
 
 	def verify_login
@@ -18,7 +17,6 @@ class EmployeesController < ApplicationController
 				render "verify_login"
 			end
 		end
-		
 	end
 
 	def destroy_login
@@ -67,7 +65,7 @@ class EmployeesController < ApplicationController
 	end
 
 	def user_place
-		if params[:place]
+		if params[:place] && params[:place][:proposed_place]
 			@place = Place.new(place_params)
 			if @place.save
 				flash.now.alert = "Thanks for your Suggestion"
@@ -80,14 +78,14 @@ class EmployeesController < ApplicationController
 	end
 
 	def finalize
-	  employee = EmployeeMember.find(params[:employee_id])
-	  if employee
-	  	@employee_name = employee.name
-	  	@employee_email = employee.email
-	  	@employee_suggestion = employee.place.proposed_place
-	  	NotificationMailer.finalize_mailer(@employee_name,@employee_email,@employee_suggestion).deliver
-		flash.now.alert = 'Request email sent to all employees'
-	  end
+		employee = EmployeeMember.find(params[:employee_id])
+		if employee
+			@employee_name = employee.name
+			@employee_email = employee.email
+			@employee_suggestion = employee.place.proposed_place
+			NotificationMailer.finalize_mailer(@employee_name,@employee_email,@employee_suggestion).deliver
+			flash.now.alert = 'Request email sent to all employees'
+		end
 	end
 
 
